@@ -1,0 +1,153 @@
+html {
+    font-family: sans-serif;
+  }
+
+body {
+  margin: 0;
+}
+
+header {
+  background: rgb(52, 206, 142);
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+button {
+  margin: 50px;
+  font-size: 20px;
+  background-color: red;
+  color: white;
+  position: relative;
+  
+  border: none;
+  padding: 10px 20px;
+  animation: vibration 0.1s infinite alternate; /* Анимация вибрации */
+}
+
+button:hover {
+  background-color: greenyellow; 
+  animation-play-state: paused; 
+}
+
+@keyframes vibration {
+  0% {
+      left: 0;
+  }
+  100% {
+      left: 4px; /* Амплитуда движения */
+  }
+}
+
+a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease; /* Плавное изменение свойств в течение 0.3 секунды */
+}
+
+a:hover{
+  color: greenyellow;
+} 
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px; 
+  background-color: greenyellow; 
+  transition: width 0.3s ease; 
+}
+
+a:hover::after {
+  width: 100%; 
+  
+}
+
+
+.ball-1{
+  background-color: #8A2BE2;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: relative;
+  top: 100px;
+  left: 220px;
+  animation: bounc 1.7s infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes bounc{
+    10%{
+      height: 50px;
+      width: 50px;
+    }
+    30%{
+      height: 50px;
+      width: 40px;
+    }
+    50%{
+      height: 30px;
+      width: 57px;
+      transform: translateY(240px);
+    }
+    75%{
+      height: 50px;
+      width: 57px;
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+ 
+  
+  .ball{
+    margin: 0 auto;
+    background-color: rgb(246, 5, 190);
+    border-radius: 100%;
+    animation-name: bounce;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite; 
+    
+  }
+
+  @keyframes bounce {
+    0%  {height: 50px; width: 50px; transform: translate(0px, 0px);animation-timing-function: ease-out;} 
+    4%  {height: 50px; width: 50px; transform: translate(0px, 50px);animation-timing-function: ease-out;} 
+    7%  {height: 50px; width: 50px; transform: translate(0px, 100px);animation-timing-function: ease-out;} 
+    10% {height: 50px; width: 50px; transform: translate(0px, 150px);animation-timing-function: ease-out;} 
+    13% {height: 50px; width: 50px; transform: translate(0px, 200px);animation-timing-function: ease-out;} 
+    17% {height: 55px; width: 45px; transform: translate(0px, 250px);animation-timing-function: ease-out;} 
+    20% {height: 55px; width: 45px; transform: translate(0px, 300px);animation-timing-function: ease-out;}
+    24% {height: 55px; width: 40px; transform: translate(0px, 350px);animation-timing-function: ease-out;}
+    27% {height: 55px; width: 40px; transform: translate(0px, 400px);animation-timing-function: ease-out;} 
+    31% {height: 30px; width: 65px; transform: translate(0px, 400px);animation-timing-function: ease-out;} 
+    34% {height: 50px; width: 50px; transform: translate(0px, 400px);animation-timing-function: ease-out;} 
+    37% {height: 50px; width: 50px; transform: translate(0px, 350px);animation-timing-function: ease-out;} 
+    41% {height: 50px; width: 50px; transform: translate(0px, 300px);animation-timing-function: ease-out;} 
+    44% {height: 50px; width: 50px; transform: translate(0px, 250px);animation-timing-function: ease-out;} 
+    48% {height: 50px; width: 50px; transform: translate(0px, 200px);animation-timing-function: ease-out;} 
+    51% {height: 50px; width: 50px; transform: translate(0px, 250px);animation-timing-function: ease-out;} 
+    55% {height: 50px; width: 50px; transform: translate(0px, 300px);animation-timing-function: ease-out;} 
+    58% {height: 50px; width: 45px; transform: translate(0px, 350px);animation-timing-function: ease-out;} 
+    62% {height: 50px; width: 45px; transform: translate(0px, 400px);animation-timing-function: ease-out;} 
+    65% {height: 40px; width: 60px; transform: translate(0px, 400px);animation-timing-function: ease-out;} 
+    69% {height: 50px; width: 50px; transform: translate(0px, 400px);animation-timing-function: ease-out;} 
+    72% {height: 50px; width: 50px; transform: translate(0px, 350px);animation-timing-function: ease-out;} 
+    75% {height: 50px; width: 50px; transform: translate(0px, 300px);animation-timing-function: ease-out;} 
+    79% {height: 50px; width: 50px; transform: translate(0px, 350px);animation-timing-function: ease-out;} 
+    82% {height: 50px; width: 50px; transform: translate(0px, 400px);animation-timing-function: ease-out;} 
+    86% {height: 45px; width: 55px; transform: translate(0px, 400px);animation-timing-function: ease-out;} 
+    89% {height: 50px; width: 50px; transform: translate(0px, 400px);animation-timing-function: ease-out;} 
+    93% {height: 50px; width: 50px; transform: translate(0px, 350px);animation-timing-function: ease-out;} 
+    96% {height: 50px; width: 50px; transform: translate(0px, 400px);animation-timing-function: ease-out;} 
+    100%{height: 50px; width: 50px; transform: translate(0px, 400px);animation-timing-function: ease-out;} 
+  }
